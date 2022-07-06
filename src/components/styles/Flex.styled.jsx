@@ -1,10 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Flex = styled.div`
   display: flex;
   align-items: center;
-  & > div {
+  gap: 2rem;
+  & > div,
+  & > ul {
+    /*!Tüm elemanların buyumesine izin ver*/
     flex-grow: 1;
+    /* Tüm div'lerin eşit miktarda alan tutabilmesine izin ver.*/
     flex-basis: 0;
   }
   @media (max-width: ${({ theme }) => theme.responsive}) {
